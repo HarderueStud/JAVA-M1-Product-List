@@ -36,7 +36,11 @@
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:text="Product Description"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+        />
+
 
         <!-- Add any additional information you want to display here -->
 

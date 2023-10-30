@@ -1,6 +1,7 @@
 package com.harderue.s.company.m1_poduct_list;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.productName.setText(product.getName());
         holder.productDescription.setText(product.getDescription());
         holder.productImage.setImageResource(product.getImageResource());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, MainActivity2.class);
+            intent.putExtra("product", product);
+            context.startActivity(intent);
+        });
     }
 
     @Override
